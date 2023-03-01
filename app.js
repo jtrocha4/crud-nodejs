@@ -4,6 +4,10 @@ const app = express();
 //Motor de diseño ejs
 app.set("view engine", "ejs");
 
+//Capturar datos del formulario
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+
 // app.get("/", (req,res)=>{
 //     res.send("Bienvenidos")
 // })
